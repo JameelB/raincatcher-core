@@ -34,8 +34,8 @@ contained in the following directories:
   <dt>demo/</dt>
   <dd>Full-fledged Demo applications, showcasing the usage of multiple modules</dd>
 
-  <dt>examples/</dt>
-  <dd>Smaller examples and templates for other packages in the repository</dd>
+  <dt>templates/</dt>
+  <dd>Templates and examples for other packages in the repository</dd>
 </dl>
 
 ## Creating a new package
@@ -118,3 +118,21 @@ We recommend users to write their code in TypeScript, especially if their new Ra
 ![JS completion through editor support](img/js-completion.png)
 
 See the example on [examples/js]() for more information also for reusing the unit test suites from JavaScript code.
+
+### Publishing modules
+
+Before publishing the typescript modules, do a manual compilation step via `npm run build` on the root of the repository.
+
+### Repository commands
+
+ `npm run test` - run unit tests
+
+ `npm run bootstrap` - perform boostrap for all modules
+
+ `npm run start` - run top level applications
+
+ `npm run lint` - execute tslint for all modules
+
+ `npm run build` - execute the build command for all modules, compiling TypeScript sources to JavaScript
+
+ `npm run cleanInstall` - perform install without executing additional scripts

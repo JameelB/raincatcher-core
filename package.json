@@ -5,7 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "lerna run test",
-    "bootstrap": "lerna bootstrap"
+    "clean": "lerna exec npm run clean",
+    "cleanInstall": "lerna exec npm install --ignore-scripts",
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run start  --parallel --stream --scope=@raincatcher/demo-*",
+    "docs": "lerna exec -- typedoc --out docs/ --excludePrivate",
+    "lint": "tslint '*/*/src/**/*.ts' '*/*/test/**/*.ts'",
+    "build": "lerna run build",
+    "clean": "lerna run clean"
   },
   "repository": {
     "type": "git",
@@ -18,6 +25,8 @@
   },
   "homepage": "https://github.com/feedhenry-raincatcher/raincatcher#readme",
   "devDependencies": {
-    "lerna": "^2.0.0-rc.5"
+    "lerna": "^2.0.0-rc.5",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4"
   }
 }
