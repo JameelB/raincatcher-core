@@ -8,4 +8,8 @@ router.get('/', (req: express.Request, res: express.Response) => {
   res.json(api);
 });
 
+router.get('/access-denied', (req: express.Request, res: express.Response) => {
+  res.json({msg: 'You are not authorized to access this resource'});
+});
+
 export default router;
